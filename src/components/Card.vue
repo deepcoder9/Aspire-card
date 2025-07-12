@@ -17,7 +17,7 @@
     </div>
     <div class="relative bg-[#01D167] p-4 md:p-6 pt-6 md:pt-8 text-white rounded-xl md:rounded-xl rounded-tr-none">
       <div class="w-full flex justify-end items-center">
-        <img src="../assets/aspire_logo_white.svg" class="h-6 md:h-8 mb-2" alt="Aspire Logo" />
+        <img :src="aspireLogo" class="h-6 md:h-8 mb-2" alt="Aspire Logo" />
       </div>
       <div class="mt-3 md:mt-4 mb-3 md:mb-4">
         <h2 class="text-xl md:text-2xl font-semibold">{{ props.card.name }}</h2>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="h-6 md:h-8">
-          <img src="./../assets/visa_logo.svg" alt="Visa Logo" />
+          <img :src="visaLogo" alt="Visa Logo" />
         </div>
       </div>
     </div>
@@ -53,6 +53,9 @@
 import { formatCardNumber } from "./../util";
 import { useMobile } from '../composable/useMobile';
 import { computed } from 'vue';
+
+const aspireLogo = new URL('../assets/aspire_logo_white.svg', import.meta.url).href;
+const visaLogo = new URL('../assets/visa_logo.svg', import.meta.url).href;
 
 const props = defineProps<{
   card: {
