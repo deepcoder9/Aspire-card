@@ -24,7 +24,7 @@
       </div>
       <div class="flex space-x-4 mb-6 md:mb-8">
         <div class="flex flex-row space-x-2 md:space-x-6 overflow-hidden">
-          <template v-for="(group, index) in displayedCardNumber.split(' ')" :key="index">
+          <template v-for="(group, _index) in displayedCardNumber.split(' ')" :key="_index">
             <div class="flex space-x-1 md:space-x-2 mr-5">
               <span v-for="(char, idx) in group.split('')" :key="idx" class="text-lg md:text-xl font-semibold font-mono tracking-wide">{{ char }}</span>
             </div>

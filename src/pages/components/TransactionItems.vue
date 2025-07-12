@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import FileStorageSvg from "../../assets/file_storage.svg?component";
+import FlightsSvg from "../../assets/flights.svg?component";
+import MegaphoneSvg from "../../assets/megaphone_icon.svg?component";
+import CardSvg from "../../assets/business-and-finance.svg?component";
+import Next from "../../assets/next.svg?component";
+
 const props = defineProps<{
   transaction: {
     name: string;
@@ -14,25 +20,25 @@ const getTransactionIcon = computed(() => {
   switch (props.transaction.category) {
     case "shopping":
       return {
-        icon: "file_storage",
+        icon: FileStorageSvg,
         bg: "#009DFF1A",
         fill: "#009dff",
       };
     case "travel":
       return {
-        icon: "flights",
+        icon: FlightsSvg,
         bg: "#00D6B51A",
         fill: "#00d6b5",
       };
     case "marketing":
       return {
-        icon: "megaphone",
+        icon: MegaphoneSvg,
         bg: "#F251951A",
         fill: "#f25195",
       };
     default:
       return {
-        icon: "file_storage",
+        icon: FileStorageSvg,
         bg: "#009DFF1A",
         fill: "#009dff",
       };
@@ -97,20 +103,3 @@ function formatAmount(amount: number) {
     </div>
   </div>
 </template>
-<script lang="ts">
-import FileStorageSvg from "./../../assets/file_storage.svg?component";
-import FlightsSvg from "./../../assets/flights.svg?component";
-import MegaphoneSvg from "./../../assets/megaphone_icon.svg?component";
-import CardSvg from "./../../assets/business-and-finance.svg?component";
-import Next from "./../../assets/next.svg?component";
-
-export default {
-  components: {
-    "file_storage": FileStorageSvg,
-    "flights": FlightsSvg,
-    "megaphone": MegaphoneSvg,
-    CardSvg,
-    Next,
-  },
-};
-</script>

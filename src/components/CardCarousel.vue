@@ -29,7 +29,7 @@
             :style="{ transform: `translateX(-${currentCardIndex * 100}%)` }"
           >
             <div
-              v-for="card in cards"
+              v-for="(card, _index) in cards"
               :key="card.id"
               class="min-w-full flex-shrink-0 w-full"
             >
@@ -45,7 +45,7 @@
 
         <div v-if="cards.length > 1" class="flex justify-center mt-4 space-x-2">
           <div
-            v-for="(card, index) in cards"
+            v-for="(_card, index) in cards"
             :key="index"
             @click="setCurrentCardIndex(index)"
             :class="[

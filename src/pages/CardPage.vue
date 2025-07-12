@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import Card from "./../components/Card.vue";
 import NavBar from "./../components/NavBar.vue";
 import CardPageLeftSection from "./components/CardPageLeftSection.vue";
 </script>
